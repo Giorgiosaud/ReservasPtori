@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "57ae669d1edfa64e57483253839154a4",
+    "content-hash": "a5d9732a9b196d8e4373afee07848d95",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -722,32 +722,28 @@
         },
         {
             "name": "giorgiosaud/carbonlocalizer",
-            "version": "dev-master",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/giorgiosaud/carbonlocalizer.git",
+                "reference": "caf573fa3b440fec4f33c676fa72aa3234aa5663"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/jorgelsaud/develop/composerPackages/carbonlocalizer",
-                "reference": "ec9ff1ff6d8dc9805f1b2a49f43cef7b04947e9d",
-                "shasum": null
+                "type": "zip",
+                "url": "https://api.github.com/repos/giorgiosaud/carbonlocalizer/zipball/caf573fa3b440fec4f33c676fa72aa3234aa5663",
+                "reference": "caf573fa3b440fec4f33c676fa72aa3234aa5663",
+                "shasum": ""
             },
             "require": {
                 "laravel/framework": "~5.0"
             },
             "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Giorgiosaud\\Carbonlocalizer\\Provider\\CarbonlocalizerServiceProvider"
-                    ],
-                    "aliases": {
-                        "CarbonLoc": "Giorgiosaud\\Carbonlocalizer\\Facades\\Carbonlocalizer"
-                    }
-                }
-            },
             "autoload": {
                 "psr-4": {
-                    "Giorgiosaud\\Carbonlocalizer\\": "src"
+                    "jorgelsaud\\Carbonlocalizer\\": "src"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -758,9 +754,7 @@
                 }
             ],
             "description": "Cambiar idioma a fechas Carbon en idioma humano",
-            "transport-options": {
-                "symlink": true
-            }
+            "time": "2015-04-09T00:41:13+00:00"
         },
         {
             "name": "giorgiosaud/mercado-pago",
@@ -4956,7 +4950,6 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "giorgiosaud/carbonlocalizer": 20,
         "giorgiosaud/mercado-pago": 20,
         "patricktalmadge/bootstrapper": 20
     },

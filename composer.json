@@ -28,7 +28,7 @@
         "php": ">=7.0.0",
         "doctrine/dbal": "^2.6",
         "fideloper/proxy": "~3.3",
-        "giorgiosaud/carbonlocalizer": "@dev",
+        "giorgiosaud/carbonlocalizer": "^1.0",
         "giorgiosaud/mercado-pago": "@dev",
         "laracasts/flash": "^3.0",
         "laravel/framework": "5.5.*",
