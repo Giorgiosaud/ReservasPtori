@@ -10,7 +10,7 @@
         <div class="form-group row">
             <label for="numero_de_reserva" class="col-sm-2 col-form-label">Escriba el Numero de Reserva que Busca:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="numero_de_reserva" id="numero_de_reserva" cols="30" rows="10"></input>
+                <input type="text" class="form-control" name="numero_de_reserva" id="numero_de_reserva" ></input>
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
         <div class="form-group row">
             <label for="nombreoapellido" class="col-sm-2 col-form-label">Escriba el Nombre o apellido que busca:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" name="nombreoapellido" id="nombreoapellido" cols="30" rows="10"></input>
+                <input type="text" class="form-control" name="nombreoapellido" id="nombreoapellido" ></input>
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
         <div class="form-group row">
             <label for="fecha" class="col-sm-2 col-form-label">Fecha del Paseo:</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control datePicker" name="fecha" id="fecha2" cols="30" rows="10"></input>
+                <input type="text" class="form-control datePicker" name="fecha" id="fecha2" ></input>
             </div>
         </div>
     </div>
