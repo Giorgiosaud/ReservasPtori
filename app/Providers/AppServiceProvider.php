@@ -14,8 +14,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        view()->composer('templates.assets.nav',function($view){
-            $view->with('logo',Variable::whereNombre('logo')->get()->first());
+        view()->composer('templates.assets.nav', function ($view) {
+            $view->with('logo', Variable::whereNombre('logo')->get()->first());
         });
     }
 

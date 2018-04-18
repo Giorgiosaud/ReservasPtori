@@ -30,22 +30,21 @@ class EmbarcacionesAdminController extends Controller
     {
         $embarcaciones = Embarcacion::all();
         $embarcacionesTableStyle = [];
-        foreach ($embarcaciones as $embarcacion)
-        {
+        foreach ($embarcaciones as $embarcacion) {
             $array = [
                 'Id' => $embarcacion->id,
-                'Nombre'=>$embarcacion->nombre,
-                'Público'=>$embarcacion->publico,
-                'Abordaje Minimo'=>$embarcacion->abordajeMinimo,
-                'Abordaje Normal'=>$embarcacion->abordajeMaximo,
-                'Abordaje Maximo'=>$embarcacion->abordajeNormal,
-                'Lunes'=>$embarcacion->lunes,
-                'Martes'=>$embarcacion->martes,
-                'Miercoles'=>$embarcacion->miercoles,
-                'Jueves'=>$embarcacion->jueves,
-                'Viernes'=>$embarcacion->viernes,
-                'Sábado'=>$embarcacion->sabado,
-                'Domingo'=>$embarcacion->domingo,
+                'Nombre' => $embarcacion->nombre,
+                'Público' => $embarcacion->publico,
+                'Abordaje Minimo' => $embarcacion->abordajeMinimo,
+                'Abordaje Normal' => $embarcacion->abordajeMaximo,
+                'Abordaje Maximo' => $embarcacion->abordajeNormal,
+                'Lunes' => $embarcacion->lunes,
+                'Martes' => $embarcacion->martes,
+                'Miercoles' => $embarcacion->miercoles,
+                'Jueves' => $embarcacion->jueves,
+                'Viernes' => $embarcacion->viernes,
+                'Sábado' => $embarcacion->sabado,
+                'Domingo' => $embarcacion->domingo,
 
 
             ];
@@ -71,7 +70,7 @@ class EmbarcacionesAdminController extends Controller
      */
     public function store(EmbarcacionAdminRequest $request)
     {
-        $embarcacion=Embarcacion::create($request->all());
+        $embarcacion = Embarcacion::create($request->all());
         return redirect()->route('embarcaciones.index');
     }
 

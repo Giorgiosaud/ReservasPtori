@@ -3,8 +3,10 @@
 	@include('templates.errors')
 	<div class="container">
 		<h1>Editar {!!$TipoDePaseo->nombre!!}</h1>
-		{!!Form::horizontalModel($TipoDePaseo,['url'=>URL::route('tipoDePaseo.update',$TipoDePaseo->id),'role'=>'form','method'=>'PUT'])!!}
+		<form action="{{URL::route('tipoDePaseo.update',$TipoDePaseo->id)}}" method="POST">
+		{{csrf_field()}}
+		<input type="hidden" name="_method" value="PUT" />
 		@include('TiposDePaseos.admin.partials._form',['submit'=>'Modificar Paseo'])
-		{!!Form::close()!!}
+		</form>
 	</div>
 @endsection

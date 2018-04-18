@@ -1,24 +1,33 @@
 @extends('templates.mainInterno')
 @section('content')
-
-		<div class="table-responsive">
-			{!!Table::withContents($TiposDepaseosTableStyle)
-			->callback('Accion', function ($field, $row) {
-			return Button::primary('Editar '.$row['Nombre'])->asLinkTo(route('tipoDePaseo.edit', $row['Id']))->block();
-			})
-			->callback('Borrar', function ($field, $row) {
-			$return=Form::open(['class' => 'form-inline', 'method' => 'DELETE', 'route' => ['tipoDePaseo.destroy', $row['Id']]]);
-			$return.=Form::Submit('Borrar ',[ 'class' => 'btn btn-danger']);
-			$return.=Form::close();
-
-			return $return;
-
-
-			})
-			->hover()->render()
-			!!}
-
+<div class="container">
+	<div class="row">
+		@foreach($TiposDepaseosTableStyle[1] as $index=>$key)
+		<div class="col">
+			{{$index}}
 		</div>
-		{!!Button::primary('Nuevo Tipo de Paseo')->asLinkTo(route('tipoDePaseo.create'))->block()!!}
-
+		@endforeach
+		
+	</div>
+	@foreach($TiposDepaseosTableStyle as $tipoDePaseo)
+	<div class="row">
+		@foreach ($tipoDePaseo as $item )
+		<div class="col text-left">
+			{{$item}}
+		</div>		
+		@endforeach
+		<div class="col">
+			<a href="{{route('tipoDePaseo.edit', $tipoDePaseo['Id'])}}" class="btn btn-primary">Editar</a>
+		</div>
+		<div class="col">
+			<form action="{{route('tipoDePaseo.destroy', $tipoDePaseo['Id'])}}" method="POST">    
+				<input type="hidden" name="_method" value="delete" />
+				{!! csrf_field() !!}
+				<button class="btn btn-danger">Delete</button>
+			</form>
+		</div>
+	</div>
+	@endforeach
+	<a href="{{route('tipoDePaseo.create')}}"class="btn primary" >Nuevo Tipo de Paseo</a>
+</div>
 @endsection
